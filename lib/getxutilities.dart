@@ -30,7 +30,7 @@ class _GetxUtilitiesState extends State<GetxUtilities> {
                   title: 'Delete',
                   titlePadding: EdgeInsets.only(top: 20),
                   contentPadding: EdgeInsets.all(20),
-                  // middleText: 'Are you sure?',
+                  middleText: 'Are you sure?',
                   textConfirm: 'Yes',
                   confirmTextColor: Colors.black,
                   textCancel: 'No',
