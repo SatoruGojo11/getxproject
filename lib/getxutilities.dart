@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxproject/FirstScreen.dart';
 
 class GetxUtilities extends StatefulWidget {
   const GetxUtilities({super.key});
@@ -17,7 +18,7 @@ class _GetxUtilitiesState extends State<GetxUtilities> {
           'GetX Tutorials',
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Card(
             margin: EdgeInsets.all(25),
@@ -84,6 +85,17 @@ class _GetxUtilitiesState extends State<GetxUtilities> {
                     ),
                   ),
                 );
+              },
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.all(25),
+            elevation: 10,
+            child: ListTile(
+              title: Text('Getx Navigation'),
+              subtitle: Text('Go to First Screen'),
+              onTap: () {
+                Get.to(FirstScreen());
               },
             ),
           ),
