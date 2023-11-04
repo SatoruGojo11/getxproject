@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxproject/FirstScreen.dart';
+import 'package:getxproject/Screens/ChangeLanguageScreen.dart';
+import 'package:getxproject/Screens/ThirdScreen.dart';
 
 class GetxUtilities extends StatefulWidget {
   const GetxUtilities({super.key});
@@ -55,7 +56,7 @@ class _GetxUtilitiesState extends State<GetxUtilities> {
             elevation: 10,
             child: ListTile(
               title: Text('Getx Bottom Sheet'),
-              subtitle: Text('This is your Chat'),
+              subtitle: Text('DO you want to change App theme?'),
               onTap: () {
                 Get.bottomSheet(
                   Container(
@@ -95,7 +96,30 @@ class _GetxUtilitiesState extends State<GetxUtilities> {
               title: Text('Getx Navigation'),
               subtitle: Text('Go to First Screen'),
               onTap: () {
-                Get.to(FirstScreen());
+                // Get.to(FirstScreen());
+                Get.toNamed('/s1', arguments: ["Jaydip Shingala", "20"]);
+              },
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.all(25),
+            elevation: 10,
+            child: ListTile(
+              title: Text('Getx Height & Width'),
+              subtitle: Text('Check it out!!'),
+              onTap: () {
+                Get.to(ThirdScreen());
+              },
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.all(25),
+            elevation: 10,
+            child: ListTile(
+              title: Text('Getx App Language'),
+              subtitle: Text('Check it out!!'),
+              onTap: () {
+                Get.to(ChangeLanguages());
               },
             ),
           ),

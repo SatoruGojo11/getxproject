@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getxproject/Screens/SecondScreen.dart';
 import 'package:getxproject/getxutilities.dart';
 
 class FirstScreen extends StatefulWidget {
-  const FirstScreen({super.key});
+  var Name;
+
+  FirstScreen({super.key, this.Name});
 
   @override
   State<FirstScreen> createState() => _FirstScreenState();
@@ -19,16 +22,19 @@ class _FirstScreenState extends State<FirstScreen> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
-              child: Text('This is Our Home Page'),
-            ),
+            Text('This is First Screen'),
+            Text('Name :- ${Get.arguments[0]}'),
+            Text('Age :- ${Get.arguments[1]}'),
             TextButton(
               onPressed: () {
-                Get.back();
+                // Get.to(SecondScreen());
+                Get.toNamed('/s2');
               },
               child: Text(
-                'GO back',
+                'GO To Second Screen',
               ),
             ),
           ],
