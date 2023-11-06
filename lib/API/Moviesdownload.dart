@@ -19,11 +19,8 @@ class _MoviesdownloadApiState extends State<MoviesdownloadApi> {
 
     print('3');
 
-    final data = await http.get(url,
-    headers:{
-      'X-RapidAPI-Key': '9b18305f95msh7dd5c2b89ec3ecap1cbeb8jsnaa4358a96ceb',
-      'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com',
-    });
+    final data = await http.get(url); // Headers Required From Rapidapi
+
 
     if (data.statusCode == 200) {
       var listdata = await jsonDecode(data.body);
