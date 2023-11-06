@@ -1,7 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxproject/Screens/ChangeLanguageScreen.dart';
-import 'package:getxproject/Screens/ThirdScreen.dart';
+import 'package:getxproject/Utilities/ChangeLanguageScreen.dart';
+import 'package:getxproject/Utilities/ThirdScreen.dart';
 
 class GetxUtilities extends StatefulWidget {
   const GetxUtilities({super.key});
@@ -48,6 +50,36 @@ class _GetxUtilitiesState extends State<GetxUtilities> {
                   //   ],
                   // ),
                 );
+              },
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.all(25),
+            elevation: 10,
+            child: ListTile(
+              title: Text('Getx Snackbar'),
+              subtitle: Text('This is your Snackbar'),
+              onTap: () {
+                // Getx Snackbar
+                Get.snackbar(
+                  'Jaydip Shingala',
+                  'This is Getx Snackbar!!',
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  snackPosition: SnackPosition.BOTTOM,
+                  backgroundColor: Colors.amber,
+                  icon: Icon(
+                    Icons.account_circle,
+                    size: 40,
+                  ),
+                );
+                // Normal Snackbar
+                // ScaffoldMessenger.of(context).showSnackBar(
+                //   SnackBar(
+                //     content: Text('Jaydip Shingala'),
+                //     backgroundColor: Colors.red,
+                //     dismissDirection: DismissDirection.startToEnd,
+                //   ),
+                // );
               },
             ),
           ),
@@ -125,29 +157,17 @@ class _GetxUtilitiesState extends State<GetxUtilities> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Getx Snackbar
-          Get.snackbar(
-            'Jaydip Shingala',
-            'This is Getx Snackbar!!',
-            snackPosition: SnackPosition.BOTTOM,
-            backgroundColor: Colors.amber,
-            icon: Icon(
-              Icons.account_circle,
-              size: 40,
-            ),
-          );
-          // Normal Snackbar
-          // ScaffoldMessenger.of(context).showSnackBar(
-          //   SnackBar(
-          //     content: Text('Jaydip Shingala'),
-          //     backgroundColor: Colors.red,
-          //     dismissDirection: DismissDirection.startToEnd,
-          //   ),
-          // );
-        },
-      ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
