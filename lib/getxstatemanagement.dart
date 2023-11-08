@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxproject/StateManagement/CounterApp.dart';
+import 'package:getxproject/StateManagement/Imagepicker.dart';
 import 'package:getxproject/StateManagement/MarkFavourite.dart';
 import 'package:getxproject/StateManagement/Opacityofobj.dart';
 import 'package:getxproject/StateManagement/SwitchwithStateManagement.dart';
@@ -65,6 +66,18 @@ class _GetxUtilitiesState extends State<GetxStatemanagement> {
               subtitle: Text('You can like/unlike Any Items'),
               onTap: () {
                 Get.to(Markasfavourite());
+              },
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.all(25),
+            elevation: 10,
+            child: ListTile(
+              title: Text('Getx Image-Picker With State Management'),
+              subtitle: Text('Click Image From Camera/Gallary'),
+              onTap: () {
+                print("1");
+                Get.to(Imagepickerapp());
               },
             ),
           ),

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getxproject/Screens/SecondScreen.dart';
 import 'package:getxproject/getxutilities.dart';
 
 class FirstScreen extends StatefulWidget {
-  var Name;
+  final Name;
 
   FirstScreen({super.key, this.Name});
 
